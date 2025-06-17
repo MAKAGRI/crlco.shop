@@ -1,182 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAT Cargo VAD LLC</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-        }
-        nav {
-            background: #000;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 80px 20px;
-            background: #111;
-            color: #fff;
-            min-height: 100vh;
-            animation: fadeIn 2s ease-in-out;
-        }
-        .hero-text {
-            max-width: 500px;
-            padding: 20px;
-            animation: slideInLeft 1.5s ease;
-        }
-        .hero-text h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .hero-text p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .hero-img img {
-            max-width: 400px;
-            width: 100%;
-            border-radius: 10px;
-            animation: slideInRight 1.5s ease;
-        }
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease;
-        }
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-        .section p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #555;
-        }
-        .contact {
-            background: #e9e9e9;
-            padding: 60px 20px;
-        }
-        footer {
-            background: #000;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideInLeft {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideInRight {
-            from { transform: translateX(50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cozy Rustic Log Cabin Oasis LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f7f7f7; color: #222; line-height: 1.6; }
+    header, footer { background: #3e2723; color: white; text-align: center; padding: 20px; }
+    nav a { color: #ffd54f; margin: 0 15px; text-decoration: none; font-weight: 600; }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1592861956120-61e7c9b30b65?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: white; height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center;
+    }
+    .hero h1 { font-size: 46px; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px; }
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    .section-title { font-size: 28px; margin-bottom: 20px; color: #3e2723; text-align: center; }
+    .grid { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .card {
+      background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card img { width: 100%; border-radius: 6px; margin-bottom: 10px; }
+    a { color: #3e2723; font-weight: 600; }
+  </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">PAT Cargo VAD LLC</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<header>
+  <h1>Cozy Rustic Log Cabin Oasis LLC</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <div class="hero" id="home">
-        <div class="hero-text">
-            <h1>PAT Cargo VAD LLC</h1>
-            <p>Your trusted partner in transportation and warehousing. We provide reliable cargo services and storage solutions to meet your business needs with efficiency and care.</p>
-        </div>
-        <div class="hero-img">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=934&q=80" alt="Cargo Services">
-        </div>
+<div class="hero">
+  <h1>Escape. Relax. Recharge.</h1>
+</div>
+
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+  <p>Cozy Rustic Log Cabin Oasis LLC offers the perfect getaway for those looking to disconnect and enjoy nature. Located in beautiful South Lake Tahoe, California, our cabins combine rustic charm with modern comfort, providing an unforgettable retreat experience in the heart of nature.</p>
+</section>
+
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🌲 Cabin Rentals</h3>
+      <p>Beautiful log cabins fully equipped for short or long-term stays, perfect for couples, families or groups.</p>
     </div>
-
-    <div class="section" id="about">
-        <h2>About Us</h2>
-        <p>PAT Cargo VAD LLC is a Domestic LLC based in Arizona, offering specialized services in transportation and warehousing. With a focus on reliability and customer satisfaction, we have been serving businesses since 2021.</p>
-        <p><strong>Registered Address:</strong><br>
-        2902 W Sweetwater Ave, Apt 2190, Phoenix, AZ 85029, United States</p>
+    <div class="card">
+      <h3>🔥 Private Outdoor Areas</h3>
+      <p>Enjoy cozy fire pits, private patios, and scenic surroundings designed for your comfort and privacy.</p>
     </div>
-
-    <div class="section contact" id="contact">
-        <h2>Contact Us</h2>
-        <p><strong>Email:</strong> <a href="mailto:contact@patcargovadllc.click">contact@patcargovadllc.click</a></p>
-        <p><strong>Agent Address:</strong><br>
-        2902 W Sweetwater Ave, Apt 2190, Phoenix, AZ 85029, United States</p>
+    <div class="card">
+      <h3>🚴 Outdoor Adventures</h3>
+      <p>Access to hiking trails, fishing spots, and year-round outdoor activities right outside your cabin door.</p>
     </div>
+  </div>
+</section>
 
-    <footer>
-        &copy; 2025 PAT Cargo VAD LLC. All rights reserved.
-    </footer>
+<section id="gallery">
+  <h2 class="section-title">Gallery</h2>
+  <div class="grid">
+    <div class="card"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800" alt="Cabin View"><p>Our luxury cabins in the forest</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1560448075-bb0bfffb6eaf?auto=format&fit=crop&w=800" alt="Inside"><p>Rustic interior with modern comfort</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1590755508435-0a94d7a8b660?auto=format&fit=crop&w=800" alt="Firepit"><p>Relax by the fire under the stars</p></div>
+  </div>
+</section>
 
-    <script>
-        // Intersection Observer for fade-in effect
-        const sections = document.querySelectorAll('.section');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
+<section id="team">
+  <h2 class="section-title">Our Team</h2>
+  <div class="card">
+    <p><strong>Manager:</strong> Allison Martin</p>
+    <p><strong>Location:</strong> South Lake Tahoe, California, USA</p>
+  </div>
+</section>
 
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <div class="card">
+    <p><strong>Email:</strong> <a href="mailto:coontact@crlco.shop">coontact@crlco.shop</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+19093478408">+1 909-347-8408</a></p>
+    <p><strong>Address:</strong>  South Lake Tahoe, California, USA</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Cozy Rustic Log Cabin Oasis LLC. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
